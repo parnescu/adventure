@@ -1,5 +1,10 @@
+@import '../../../scss/_mixins';
+
 $avatarSize: 200px;
+$mediumSize: 700px;
+$smallSize: 450px;
 $bkgColor: #3367d6;
+
 .hud {
 	position: relative;
 	height: $avatarSize + 60px;
@@ -41,11 +46,19 @@ $bkgColor: #3367d6;
 		background: $bkgColor;
 
 		.filters {
-			margin:10px 0;
+			@media (max-width: $mediumSize){
+				li.wrapper {
+					display: block;
+					width: 100%;
+					margin-bottom: 6px;
+					clear:both;
+				}
+			}
 		}
 		.stats {
 			clear:both;
 			float:none;
+			margin-bottom: 10px;
 
 			> li {
 				display: inline-block;
@@ -62,6 +75,11 @@ $bkgColor: #3367d6;
 					text-align: center;
 					font-weight: bold;
 				}
+
+				@media (max-width: $mediumSize){
+					display: block;
+					width: 100%;
+				}
 			}
 		}
 		
@@ -71,6 +89,44 @@ $bkgColor: #3367d6;
 			top: 110px;
 			font-size: 20px;
 			padding: 15px 20px ;
+
+			@media (max-width: $mediumSize){
+				top: auto;
+				right: 20px;
+				bottom: 20px;
+			}
 		}
+
 	}	
+
+	@media (max-width: $smallSize){
+		height: auto;
+
+		.hunter {
+			background: $bkgColor;
+
+			.picWrapper{
+				position:relative;
+				padding-bottom: 40px;
+				height: 200px;
+				@include hCenterElement(200px);
+			}
+			.name {
+				@include hCenterElement(200px);
+			}
+		}
+
+		> .wrapper {
+			padding:20px;
+
+			.goHunt{
+				position: relative;
+				bottom:0;
+				@include hCenterElement(300px);
+				margin-top: 20px;
+				right:auto;
+			}
+		}
+	}
 }
+

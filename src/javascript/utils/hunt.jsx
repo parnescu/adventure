@@ -28,7 +28,7 @@ class HuntHelper{
 				}
 				FluxHelper.callAction(Actions.HUNT_SUCCESS, creature);
 			}
-		}, Math.floor(this.getRandomFromInterval(7000,2500)));
+		}, Math.floor(this.getRandomFromInterval(4000,2500)));
 	}
 }
 

@@ -15,3 +15,9 @@
 	-moz-animation: $keyframes $howLong $type $forever;
 	animation: $keyframes $howLong $type $forever;
 }
+
+@mixin hCenterElement($size){
+	width: $size;
+	left: 50%;
+	margin-left: -$size*.5
+}
