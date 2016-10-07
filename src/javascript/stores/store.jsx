@@ -7,7 +7,7 @@ import Hunt from '../utils/hunt.jsx';
 import Stats from '../utils/stats.jsx';
 import EmptyCage from '../constants/emptyCage.jsx';
 
-let MAX_CREATURES = 2;
+let MAX_CREATURES = 10;
 let SET_CREATURES = 0;
 
 let store = createStore((state, action)=>{
@@ -140,26 +140,7 @@ let store = createStore((state, action)=>{
 {	// INITIALISING STORE WITH THE DEFAULT APPLICATION STATE
 	maxCreatures: MAX_CREATURES,
 	setCreatures: SET_CREATURES,
-	creatures: [
-		// {
-		// 	occupier: {
-		// 		name: "Antharas",
-		// 		capturedAt: +new Date,
-		// 		type: "Phoenix",
-		// 		age: 21,
-		// 		mana: 1542
-		// 	}
-		// },
-		// {
-		// 	occupier: {
-		// 		name: "Kuzuri",
-		// 		capturedAt: +new Date,
-		// 		type: "Creature",
-		// 		age: 321,
-		// 		mana: 3542,
-		// 	}
-		// }
-	],
+	creatures: [],
 	showModal: false,
 	isFiltered: false,
 	isStarted: false,

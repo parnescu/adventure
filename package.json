@@ -2,11 +2,10 @@
   "name": "AdventureHunter",
   "version": "0.0.1",
   "description": "going on an adventure",
-  "main": "server/app.js",
   "scripts": {
     "test": "karma start",
-    "testDev": "karma start --live",
-    "start": "webpack-dev-server --inline --content-base public/"
+    "start": "webpack-dev-server --inline --content-base public/",
+    "testDev": "karma start --live"
   },
   "repository": {
     "type": "git",

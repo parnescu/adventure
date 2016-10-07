@@ -1,3 +1,4 @@
-node_modules
+/*node_modules/
 -materiale
 .DS_Store
+*.log
