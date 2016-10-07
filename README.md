@@ -14,3 +14,11 @@ Rules:
 - do "npm install && npm start"
 - navigate to http://localhost:8080 on any browser
 - hunt!
+- to run the test suite do "npm test" or "npm run testDev"
+
+# Used techologies
+
+- ES6 javascript with webpack & babel as build tools
+- React with Redux as javascript frameworks
+- SASS as css pre-processor
+- Karma & Jasmine as testing tools
