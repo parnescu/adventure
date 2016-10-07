@@ -1,0 +1,59 @@
+$breakSize: 500px;
+
+.welcome {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20px;
+
+	> * {
+		text-align: center;
+	}
+
+	.preText {
+		color: rgba(255,255,255,.5)
+	}
+
+	.avatar {
+		margin: 20px auto;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		border:5px solid white;
+		overflow: hidden;
+		
+		@media (max-width: $breakSize){
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.error {
+		color: #d633bf;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 12px;
+	}
+
+	input {
+		display: block;
+		width: 400px;
+		border-radius: 6px;
+		border: none;
+		font-weight: bold;
+		color: #3367d6;
+		padding: 10px;
+		margin: 0 auto;
+
+		@media (max-width: $breakSize){
+			width: 100%;
+		}
+	}
+
+	button {
+		max-width: 200px;
+		margin: 10px auto;
+		display: block;
+	}
+}

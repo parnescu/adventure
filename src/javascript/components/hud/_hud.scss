@@ -1,0 +1,76 @@
+$avatarSize: 200px;
+$bkgColor: #3367d6;
+.hud {
+	position: relative;
+	height: $avatarSize + 60px;
+
+	.hunter {
+		.picWrapper {
+			width: $avatarSize;
+			height: $avatarSize;
+			border:10px solid $bkgColor;
+			border-radius: 50%;
+			overflow: hidden;
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			background: darken($bkgColor, 20);
+		}
+		.name{
+			width: $avatarSize * .8;
+			margin-left: $avatarSize * .2;
+			text-align: center;
+			background: black;
+			background: rgba(0,0,0,.6);
+			border-radius: 5px;
+			position: absolute;
+			top: 20px;
+			font-size: 20px;
+			padding: 10px 20px;
+			.race {
+				padding-right: 6px;
+				opacity: .8;
+			}
+		}
+	}
+
+	> .wrapper {
+		padding: 20px;
+		padding-left: $avatarSize + 100px;
+		box-sizing: border-box;
+		background: $bkgColor;
+
+		.filters {
+			margin:10px 0;
+		}
+		.stats {
+			clear:both;
+			float:none;
+
+			> li {
+				display: inline-block;
+				font-weight: normal;
+				padding-right: 20px;
+				span {
+					vertical-align: middle;
+				}
+				.label {
+					opacity: .8;
+					margin-right: 10px;
+				}
+				.value {
+					text-align: center;
+					font-weight: bold;
+				}
+			}
+		}
+		
+		.goHunt {
+			position: absolute;
+			right: $avatarSize * .3;
+			top: 110px;
+			font-size: 20px;
+			padding: 15px 20px ;
+		}
+	}	
+}

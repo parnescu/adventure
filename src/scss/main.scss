@@ -1,0 +1,84 @@
+$backgroundColor: #2b2d32;
+$btnBkgColor: #123d8c;
+$btnDisabledColor: #ccc;
+$borderColor: #414347;
+$callToAction: #dc2525;
+
+
+#app {
+	width: 100%;
+	background: $backgroundColor;
+	color: white;
+	position: relative;
+
+	.btn {
+		border: none;
+		background: $btnBkgColor;
+		color: white;
+		font-weight: bold;
+		cursor: pointer;
+		padding: 10px 15px;
+		border-radius: 4px;
+
+		&:hover {
+			background: darken($btnBkgColor, 20);
+		}
+
+		&:active {
+			background: lighten($btnBkgColor, 5);
+		}
+
+		&:disabled {
+			background: $btnDisabledColor;
+			color: darken($btnDisabledColor,20);
+			cursor: default;
+
+			&:active, &:hover {
+				background: $btnDisabledColor;
+			}
+		}
+	}
+
+	.cta {
+		background: $callToAction;
+
+		&:hover{
+			background: darken($callToAction, 20);
+		}
+
+		&:active{
+			background: lighten($callToAction, 5);
+		}
+	}
+
+	.creatures {
+		display: block;
+		overflow: hidden;
+		margin: 0 auto;
+		width: 90%;
+		max-width: 946px;
+	}
+}
+
+
+// CSS reset
+html, body {
+	width: 100%;
+	height: 100%;
+	background: $backgroundColor;
+}
+html, body, h1, h2, h3, ul, li, p, a {
+	margin:0;
+	padding:0;
+}
+input, button {
+	outline: none;
+}
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;	
+}
+// end - CSS reset

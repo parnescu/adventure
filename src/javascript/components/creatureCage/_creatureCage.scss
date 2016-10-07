@@ -1,0 +1,74 @@
+$borderColor: #414347;
+$width: 300px;
+$height: 350px;
+.cage {
+	width: $width;
+	height: $height;
+	margin: 15px 0px 15px 15px;
+	display:inline-block;
+	overflow: hidden;
+	border-radius: 3px;
+	color: black;
+	background: white;
+	position: relative;
+
+	.timerMessage {
+		position: absolute;
+		width: 100%;
+		height: 50px;
+		color:white;
+		text-align: center;
+		background: rgba(0,0,0,.7);
+		bottom: 15px;
+		z-index: 2;
+
+		.timer {
+			display: block;
+			overflow: hidden;
+			font-size:30px;
+		}
+	}
+	
+	.occupier {
+		width: 100%;
+		height: 100%;
+		padding: 15px; 
+		box-sizing: border-box;
+
+		.wrapper {
+			
+		}
+
+		.release{
+			position: absolute;
+			bottom: 15px;
+			width: 270px;
+			background: #3367d6;
+			line-height: 11px;
+		}
+
+		&.releasing {
+			.release {
+				display: none;
+			}
+		}
+	}
+
+	> img {
+		$imgSize: 300px;
+		$imgRatio: .25;
+		$imgMargin: $imgRatio * $imgSize * .5;
+
+		width: $imgRatio * $imgSize;
+	    height: auto;
+	    opacity: .4;
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -$imgMargin;
+	    margin-top: -$imgMargin;
+
+	    -webkit-filter: grayscale(100%);
+    	filter: grayscale(100%);
+	}
+}
